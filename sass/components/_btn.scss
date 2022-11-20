@@ -1,0 +1,18 @@
+.btn {
+  min-width: 200px;
+  height: 50px;
+  font-family: inherit;
+  @include font(700, 16, 1.88, 0.06);
+  text-align: center;
+  background-color: var(--accent-text-color);
+  color: var(--prinary-white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  transition: background-color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--btn-active-color);
+  }
+}

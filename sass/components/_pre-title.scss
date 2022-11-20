@@ -1,0 +1,4 @@
+.pre-title {
+  @include font(700, 14, 1.14, 0.03);
+  text-transform: uppercase;
+}
