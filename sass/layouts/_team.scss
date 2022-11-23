@@ -1,20 +1,54 @@
 .team-section {
   background-color: var(--third-background-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team-list {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
   &__member {
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 60px) / 2);
+      margin-right: 30px;
+      margin-bottom: 30px;
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      margin-bottom: 0;
+      margin-right: 30px;
+      &:nth-child(2n) {
+        margin-right: 30px;
+      }
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
     background-color: var(--prinary-white-color);
-    width: 270px;
-    margin-right: 30px;
+    width: 100%;
+    margin-bottom: 30px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     &:nth-child(4n) {
-      margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -23,13 +57,13 @@
   padding-top: 30px;
   padding-bottom: 30px;
   &__name {
-    @include font(500, 16, 1.19, 0.03);
+    @include font(500, 16, 1.17, 0.03);
     text-align: center;
     color: var(--title-text-color);
     margin-bottom: 10px;
   }
   &__jobtitle {
-    @include font(null, 16, 1.19, 0.03);
+    @include font(null, 16, 1.17, 0.03);
     text-align: center;
     color: var(--primary-text-color);
   }
