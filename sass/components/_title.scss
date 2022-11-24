@@ -3,7 +3,8 @@
   text-align: center;
   color: var(--title-text-color);
   margin-bottom: 30px;
-  @media screen and (min-width: 1200px) {
+  @include desktop {
+    @include font(700, 36, 1.17, 0.03);
     margin-bottom: 50px;
   }
 }

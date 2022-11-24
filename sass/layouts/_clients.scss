@@ -1,20 +1,34 @@
 .clients-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
   justify-content: center;
   &__member {
-    margin-right: 30px;
-    &:last-child {
-      margin-right: 0;
+    width: 100%;
+    height: 92px;
+    @include mobile {
+      @include calc(2, 30px);
+    }
+    @include tablet {
+      @include calc(3, 30px);
+    }
+    @include desktop {
+      @include calc(6, 30px);
     }
   }
   &__logo {
-    width: 170px;
-    height: 92px;
+    width: 100%;
+    height: 100%;
     border: 1px solid var(--icons-color);
     border-radius: 4px;
     display: flex;
