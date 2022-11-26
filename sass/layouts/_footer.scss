@@ -6,45 +6,63 @@
 
 .footer {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    row-gap: 60px;
+    column-gap: 165px;
+  }
+  @include desktop {
+    gap: 93px;
+    justify-content: space-between;
+    text-align: start;
+  }
+}
+
+.footer-box {
+  text-align: center;
+  @include desktop {
+    text-align: start;
+  }
+  &__join {
+    color: var(--prinary-white-color);
+  }
 }
 
 .footer-logo {
   color: var(--prinary-white-color);
-  display: inline-block;
-  margin-bottom: 20px;
 }
 
-.adress__location {
-  @include font(null, 14, 1.71, 0.03);
-  color: var(--prinary-white-color);
-  margin-bottom: 9px;
-}
-
-.adress__email {
-  margin-bottom: 9px;
-  display: inline-block;
-}
-
-.adress__email,
-.adress__tel {
-  @include font(null, 14, 1.71, 0.03);
-  color: var(--second-text-color);
-}
-
-.footer-right-colomn {
-  margin-left: 70px;
-  &__join {
-    font-style: normal;
+.adress {
+  margin-top: 20px;
+  &__location {
+    @include font(null, 14, 1.71, 0.03);
     color: var(--prinary-white-color);
+    margin-bottom: 9px;
+  }
+  &__email {
+    margin-bottom: 9px;
+    display: inline-block;
+  }
+  &__email,
+  &__tel {
+    @include font(null, 14, 1.71, 0.03);
+    color: var(--second-text-color);
   }
 }
 
 .social-list-footer {
   padding-top: 20px;
+  gap: 10px;
   &__link {
     fill: var(--prinary-white-color);
     background-color: var(--icons-footer);
-    margin-right: 10px;
+    // margin-right: 10px;
   }
 }

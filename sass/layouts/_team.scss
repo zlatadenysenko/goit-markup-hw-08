@@ -9,23 +9,17 @@
 }
 
 .team-list {
-  @include tablet {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-  }
-  @include desktop {
-    display: flex;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
   &__member {
     width: 100%;
     @include tablet {
       @include calc(2, 30px);
     }
     @include desktop {
-      width: 270px;
       @include calc(4, 30px);
     }
     background-color: var(--prinary-white-color);

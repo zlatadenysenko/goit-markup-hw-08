@@ -18,12 +18,19 @@
 </head>
 
 <body>
-    <!-- <header>
+    <header>
         <div class="header-container container">
             <nav class="navigation">
                 <a href="/" lang="en" class="navigation__logo logo ">
                     <span class="accent">Web</span>Studio
                 </a>
+                <button type="button" class="menu-open" data-menu-open>
+                    <svg class="menu-header-icon" width="40" height="40">
+                        <use href="./images/icons.svg#menu-header-icon">
+                        </use>
+                    </svg>
+                </button>
+
                 <ul class="site-nav list">
                     <li class="site-nav__item"> <a class="site-nav__link link active" href="./index.html">Студія</a>
                     </li>
@@ -50,7 +57,59 @@
                 </li>
             </ul>
         </div>
-    </header> -->
+
+        <div class="mob-menu is-hidden" data-menu>
+            <button type="button" class="menu-close" data-menu-close>
+                <svg class="menu-header-icon" width="40" height="40">
+                    <use href="./images/icons.svg#menu-header-close-icon">
+                    </use>
+                </svg>
+            </button>
+            <div class="mob-container">
+                <div class="mob-menu-top">
+                    <ul class="mob-menu-nav list">
+                        <li class="mob-menu-nav__item"> <a class="mob-menu-nav__link link active"
+                                href="./index.html">Студія</a>
+                        </li>
+                        <li class="mob-menu-nav__item"> <a class="mob-menu-nav__link link"
+                                href="./portfolio.html">Портфоліо</a>
+                        </li>
+                        <li class="mob-menu-nav__item"> <a class="mob-menu-nav__link link" href="">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="mob-menu-bottom">
+                    <ul class="mob-menu-contacts list">
+                        <li class="mob-menu-contacts__item">
+                            <a class="mob-menu-contacts__tel link" href="tel:+380961111111">
+                                +38 096 111 11 11</a>
+                        </li>
+                        <li class="mob-menu-contacts__item">
+                            <a class="mob-menu-contacts__email link" href="mailto:info@devstudio.com">
+                                info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mob-soc list">
+                        <li class="mob-soc__item">
+                            <a class="mob-soc__link link" href="" target="_blank"
+                                rel="noopener noreferrer nofollow">Instagram</a>
+                        </li>
+                        <li class="mob-soc__item">
+                            <a class="mob-soc__link link" href="" target="_blank"
+                                rel="noopener noreferrer nofollow">Twitter</a>
+                        </li>
+                        <li class="mob-soc__item">
+                            <a class="mob-soc__link link" href="" target="_blank"
+                                rel="noopener noreferrer nofollow">Facebook</a>
+                        </li>
+                        <li class="mob-soc__item">
+                            <a class="mob-soc__link link" href="" target="_blank"
+                                rel="noopener noreferrer nofollow">Linkedln</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <main>
         <section class="hero">
@@ -151,13 +210,19 @@
                 <ul class="team-list list">
                     <li class="team-list__member">
                         <picture>
-                            <source>
-                            <source>
-                            <source>
+                            <source srcset="
+                            ./images/img-prod-design.jpg 1x, 
+                            ./images/img-prod-design-2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="
+                            ./images/team-img-1-tab-1x.jpg 1x, 
+                            ./images/team-img-1-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="
+                            ./images/team-img-1-mob-1x.jpg 1x, 
+                            ./images/team-img-1-mob-2x.jpg 2x" media="(min-width: 320px)" />
+                            <img src="./images/img-prod-design.jpg" alt="Фото продакт-дизайнера Ігоря Дем'яненка"
+                                width="450" height="260">
                         </picture>
-                        <img srcset="./images/img-prod-design.jpg 1x, ./images/img-prod-design-2x.jpg 2x"
-                            src="./images/img-prod-design.jpg" alt="Фото продакт-дизайнера Ігоря Дем'яненка" width="270"
-                            height="260">
+
                         <div class="team-info">
                             <h3 class="team-info__name">Ігор Дем'яненко</h3>
                             <p class="team-info__jobtitle" lang="en">Product Designer</p>
@@ -198,8 +263,20 @@
                         </div>
                     </li>
                     <li class="team-list__member">
-                        <img src="./images/img-front-develop.jpg" alt="Фото фронтенд-розробника Ольги Рєпіної"
-                            width="270" height="260">
+                        <picture>
+                            <source srcset="
+                            ./images/img-front-develop.jpg 1x, 
+                            ./images/img-front-develop-2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="
+                            ./images/team-img-2-tab-1x.jpg 1x, 
+                            ./images/team-img-2-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="
+                            ./images/team-img-2-mob-1x.jpg 1x, 
+                            ./images/team-img-2-mob-2x.jpg 2x" media="(min-width: 320px)" />
+                            <img src="./images/img-front-develop.jpg" alt="Фото продакт-дизайнера Ігоря Дем'яненка"
+                                width="450" height="260">
+                        </picture>
+
                         <div class="team-info">
                             <h3 class="team-info__name">Ольга Рєпіна</h3>
                             <p class="team-info__jobtitle" lang="en">Frontend Developer</p>
@@ -240,8 +317,20 @@
                         </div>
                     </li>
                     <li class="team-list__member">
-                        <img src="./images/img-marketing.jpg" alt="Фото маркетолог Миколи Тарасова" width="270"
-                            height="260">
+                        <picture>
+                            <source srcset="
+                            ./images/img-marketing.jpg 1x, 
+                            ./images/img-marketing-2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="
+                            ./images/team-img-3-tab-1x.jpg 1x, 
+                            ./images/team-img-3-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="
+                            ./images/team-img-3-mob-1x.jpg 1x, 
+                            ./images/team-img-3-mob-2x.jpg 2x" media="(min-width: 320px)" />
+                            <img src="./images/img-marketing.jpg" alt="Фото продакт-дизайнера Ігоря Дем'яненка"
+                                width="450" height="260">
+                        </picture>
+
                         <div class="team-info">
                             <h3 class="team-info__name">Микола Тарасов</h3>
                             <p class="team-info__jobtitle" lang="en">Marketing</p>
@@ -282,8 +371,20 @@
                         </div>
                     </li>
                     <li class="team-list__member">
-                        <img src="./images/img-ui-design.jpg"
-                            alt="Фото дизайнера інтерфейсу користувача Михайла Єрмакова" width="270" height="260">
+                        <picture>
+                            <source srcset="
+                            ./images/img-ui-design.jpg 1x, 
+                            ./images/img-ui-design-2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="
+                            ./images/team-img-4-tab-1x.jpg 1x, 
+                            ./images/team-img-4-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="
+                            ./images/team-img-4-mob-1x.jpg 1x, 
+                            ./images/team-img-4-mob-2x.jpg 2x" media="(min-width: 320px)" />
+                            <img src="./images/img-ui-design.jpg" alt="Фото продакт-дизайнера Ігоря Дем'яненка"
+                                width="450" height="260">
+                        </picture>
+
                         <div class="team-info">
                             <h3 class="team-info__name">Михайло Єрмаков</h3>
                             <p class="team-info__jobtitle" lang="en">UI Designer</p>
@@ -383,9 +484,9 @@
             </div>
         </section>
     </main>
-    <!-- <footer class="footer-section">
+    <footer class="footer-section">
         <div class="footer container">
-            <div>
+            <div class="footer-box">
                 <a href="/" lang="en" class="footer-logo logo">
                     <span class="accent">Web</span>Studio
                 </a>
@@ -393,9 +494,10 @@
                     <p class="adress__location">м. Київ, пр-т Лесі Українки, 26 <br /> </p>
                     <a class="adress__email link" href="malito:info@devstudio.com">info@devstudio.com</a> <br />
                     <a class="adress__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+                </address>
             </div>
-            <div class="footer-right-colomn">
-                <p class="footer-right-colomn__join pre-title">Приєднуйтесь</p>
+            <div class="footer-box">
+                <p class="footer-box__join pre-title">Приєднуйтесь</p>
                 <ul class="social-list social-list-footer list">
                     <li class="instagram">
                         <a href="" class="social-list__link social-list-footer__link">
@@ -407,7 +509,7 @@
                     </li>
                     <li class="twitter">
                         <a href="" class="social-list__link social-list-footer__link">
-                            <svg wi\\\\th="20" height="20">
+                            <svg width="20" height="20">
                                 <use href="./images/icons.svg#twitter-icon">
                                 </use>
                             </svg>
@@ -431,24 +533,23 @@
                     </li>
                 </ul>
             </div>
-            </address>
-            <div class="footer-modal">
-                <form>
-                    <label class="footer-label"><span class="footer-label__text pre-title">Підпишіться на
-                            розсилку</span>
+            <form class="footer-modal">
+                <label class="footer-label"><span class="footer-label__text pre-title">Підпишіться на
+                        розсилку</span>
+                    <div class="form-wrap">
                         <input type="email" name="user-email" class="footer-label__input" required placeholder="E-mail">
-                    </label>
-                    <button type="button" class="btn footer-btn">
-                        Підписатися
-                        <svg class="footer-btn__icon" width="24" height="24">
-                            <use href="./images/icons.svg#send-icon">
-                            </use>
-                        </svg>
-                    </button>
-                </form>
-            </div>
+                </label>
+                <button type="button" class="btn footer-btn">
+                    Підписатися
+                    <svg class="footer-btn__icon" width="24" height="24">
+                        <use href="./images/icons.svg#send-icon">
+                        </use>
+                    </svg>
+                </button>
         </div>
-    </footer> -->
+        </form>
+        </div>
+    </footer>
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -506,6 +607,7 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
