@@ -6,8 +6,8 @@
   @include tablet {
     display: flex;
     align-items: center;
-    // padding-top: 21px;
-    // padding-bottom: 21px;
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
   @include desktop {
     padding-top: 24px;
@@ -81,7 +81,12 @@
   }
   &__email,
   &__tel {
-    @include font(500, 14, 1.14, 0.02);
+    @include tablet {
+      @include font(500, 12, 1.14, 0.02);
+    }
+    @include desktop {
+      @include font(500, 14, 1.14, 0.02);
+    }
     color: #757575;
     transition: color 250ms linear;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
